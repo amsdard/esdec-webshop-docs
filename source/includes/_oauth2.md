@@ -12,7 +12,7 @@ client_id     | amsterdamstandard.com
 client_secret | ThisMustBeASecretValue
 vendor-uuid   | 492d0cef-5427-4ed8-b12d-169ef39dd871
 
-A `vendor-uuid` value will be delivered by Esdec - it is an internal key of the webshop integration.
+A `vendor-uuid` value will be delivered by Esdec. It is an internal unique key of the web-shop integration and has to be set in it. We generate it manually during activating each new integration.
 
 ## Required endpoints
 
