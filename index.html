@@ -42,7 +42,7 @@
 .highlight .cs {
   color: #75715e;
 }
-.highlight .c, .highlight .cd {
+.highlight .c, .highlight .ch, .highlight .cd, .highlight .cpf {
   color: #75715e;
 }
 .highlight .err {
@@ -126,7 +126,7 @@
 .highlight .s1 {
   color: #e6db74;
 }
-.highlight .s {
+.highlight .s, .highlight .sa, .highlight .dl {
   color: #e6db74;
 }
 .highlight .na {
@@ -141,16 +141,13 @@
 .highlight .ne {
   color: #a6e22e;
 }
-.highlight .nf {
+.highlight .nf, .highlight .fm {
   color: #a6e22e;
 }
 .highlight .vc {
   color: #ffffff;
 }
 .highlight .nn {
-  color: #ffffff;
-}
-.highlight .nl {
   color: #ffffff;
 }
 .highlight .ni {
@@ -165,7 +162,7 @@
 .highlight .vi {
   color: #ffffff;
 }
-.highlight .nv {
+.highlight .nv, .highlight .vm {
   color: #ffffff;
 }
 .highlight .w {
@@ -176,6 +173,9 @@
 }
 .highlight .n, .highlight .py, .highlight .nx {
   color: #ffffff;
+}
+.highlight .nl {
+  color: #f92672;
 }
 .highlight .ow {
   color: #f92672;
@@ -196,24 +196,24 @@
   color: #f92672;
 }
     </style>
-    <link href="stylesheets/screen.css" rel="stylesheet" media="screen" />
-    <link href="stylesheets/print.css" rel="stylesheet" media="print" />
-      <script src="javascripts/all_nosearch.js"></script>
+    <link href="stylesheets/screen-0a7c4629.css" rel="stylesheet" media="screen" />
+    <link href="stylesheets/print-c427a123.css" rel="stylesheet" media="print" />
+      <script src="javascripts/all_nosearch-c275c2f6.js"></script>
   </head>
 
   <body class="index" data-languages="[&quot;Examples&quot;]">
     <a href="#" id="nav-button">
       <span>
         NAV
-        <img src="images/navbar.png" alt="Navbar" />
+        <img src="images/navbar-cad8cdcb.png" alt="" />
       </span>
     </a>
     <div class="toc-wrapper">
-      <img src="images/logo.png" class="logo" alt="Logo" />
+      <img src="images/logo-bdbb0f3d.png" class="logo" alt="" />
         <div class="lang-selector">
               <a href="#" data-language-name="Examples">Examples</a>
         </div>
-      <div id="toc" class="toc-list-h1">
+      <ul id="toc" class="toc-list-h1">
           <li>
             <a href="#introduction" class="toc-h1 toc-link" data-title="Introduction">Introduction</a>
           </li>
@@ -224,10 +224,10 @@
             <a href="#entering-the-calculator-i" class="toc-h1 toc-link" data-title="Entering the calculator I">Entering the calculator I</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#http-request" class="toc-h2 toc-link" data-title="Entering the calculator I">HTTP Request</a>
+                    <a href="#http-request" class="toc-h2 toc-link" data-title="HTTP Request">HTTP Request</a>
                   </li>
                   <li>
-                    <a href="#query-parameters" class="toc-h2 toc-link" data-title="Entering the calculator I">Query Parameters</a>
+                    <a href="#query-parameters" class="toc-h2 toc-link" data-title="Query Parameters">Query Parameters</a>
                   </li>
               </ul>
           </li>
@@ -235,20 +235,20 @@
             <a href="#entering-the-calculator-ii" class="toc-h1 toc-link" data-title="Entering the calculator II">Entering the calculator II</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#prerequisites" class="toc-h2 toc-link" data-title="Entering the calculator II">Prerequisites</a>
+                    <a href="#prerequisites" class="toc-h2 toc-link" data-title="Prerequisites">Prerequisites</a>
                   </li>
                   <li>
-                    <a href="#required-endpoints" class="toc-h2 toc-link" data-title="Entering the calculator II">Required endpoints</a>
+                    <a href="#required-endpoints" class="toc-h2 toc-link" data-title="Required endpoints">Required endpoints</a>
                   </li>
                   <li>
-                    <a href="#embedding-the-flow" class="toc-h2 toc-link" data-title="Entering the calculator II">Embedding the flow</a>
+                    <a href="#embedding-the-flow" class="toc-h2 toc-link" data-title="Embedding the flow">Embedding the flow</a>
                   </li>
               </ul>
           </li>
           <li>
             <a href="#populating-cart" class="toc-h1 toc-link" data-title="Populating cart">Populating cart</a>
           </li>
-      </div>
+      </ul>
         <ul class="toc-footer">
             <li><a href='info@esdec.com'>Contact us for a Vendor Key</a></li>
             <li><a href='https://github.com/tripit/slate'>Documentation Powered by Slate</a></li>
@@ -260,7 +260,7 @@
         <h1 id='introduction'>Introduction</h1>
 <p>Welcome to the webshop integration documentation for Esdec ClickFit EVO product. You can use this guide for integrating our calculator as a middleware in the process of selecting &amp; purchasing appropriate products in your webshop.</p>
 
-<p>The integration is not dependent on any backend - the process can adapt to few common scenarios.</p>
+<p>The integration process can adapt to a few common scenarios.</p>
 <h1 id='using-the-app'>Using the app</h1>
 <p>Currently it is required for the user to have an account in the calculator. The integration without skipping the extra registration dialog is described in <em>Entering the calculator I</em> section.</p>
 
@@ -272,15 +272,15 @@ In any other case, please contact us to setup a suitable solution.</p>
 <blockquote>
 <p>Example redirect</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://calculator.esdec.com/?vendor-uuid=492d0cef-5427-4ed8-b12d-169ef39dd871&amp;shop-session-id=32987abc"</span>
-</code></pre>
+<div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://calculator.esdec.com/?vendor-uuid=492d0cef-5427-4ed8-b12d-169ef39dd871&amp;shop-session-id=32987abc"</span>
+</code></pre></div>
 <blockquote>
 <p>Embedding within iframe:</p>
 </blockquote>
-<pre class="highlight html tab-html"><code><span class="nt">&lt;iframe</span> <span class="na">style=</span><span class="s">"width: 1920px; height: 1080px;"</span>
+<div class="highlight"><pre class="highlight html tab-html"><code><span class="nt">&lt;iframe</span> <span class="na">style=</span><span class="s">"width: 1920px; height: 1080px;"</span>
  <span class="na">src=</span><span class="s">"https://calculator.esdec.com/?vendor-uuid=492d0cef-5427-4ed8-b12d-169ef39dd871&amp;shop-session-id=32987abc"</span><span class="nt">&gt;</span>
 <span class="nt">&lt;/iframe&gt;</span>
-</code></pre>
+</code></pre></div>
 <p>In this section the simplified approach is described. It is enough either to redirect your webshop to a following URL, or embed it within an iframe.</p>
 <h3 id='http-request'>HTTP Request</h3>
 <p><code>GET https://esdec.app.amsdard.io/</code> (test environment)</p>
@@ -298,6 +298,11 @@ In any other case, please contact us to setup a suitable solution.</p>
 <td>vendor-uuid</td>
 <td>string</td>
 <td>Personal integration key - used to associate the webshop with our calculator. You will receive it from us.</td>
+</tr>
+<tr>
+<td>locale</td>
+<td>string</td>
+<td>Preferred language version, for example: nl.</td>
 </tr>
 <tr>
 <td>shop-session-id</td>
@@ -341,13 +346,13 @@ You must provide all query parameters in order to enter the calculator properly.
 <blockquote>
 <p>Open following link in a browser:</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>https://webshop.com/oauth2/authorize?client_id<span class="o">=</span>amsterdamstandard.com&amp;redirect_uri<span class="o">=</span>https://esdec.app.amsdard.io/?vendor-uuid<span class="o">=</span>492d0cef-5427-4ed8-b12d-169ef39dd871&amp;state<span class="o">=</span>oauth2&amp;response_type<span class="o">=</span>code
-</code></pre>
+<div class="highlight"><pre class="highlight shell tab-shell"><code>https://webshop.com/oauth2/authorize?client_id<span class="o">=</span>amsterdamstandard.com&amp;redirect_uri<span class="o">=</span>https://esdec.app.amsdard.io/?vendor-uuid<span class="o">=</span>492d0cef-5427-4ed8-b12d-169ef39dd871&amp;state<span class="o">=</span>oauth2&amp;response_type<span class="o">=</span>code
+</code></pre></div>
 <blockquote>
 <p>After user confirmation, you will be redirected to following URL:</p>
 </blockquote>
-<pre class="highlight plaintext"><code>https://esdec.app.amsdard.io/?vendor-uuid=492d0cef-5427-4ed8-b12d-169ef39dd871&amp;code=5df345a5cc3a1e73f6a2085d4e78d42dcc564043&amp;state=oauth2
-</code></pre>
+<div class="highlight"><pre class="highlight plaintext"><code>https://esdec.app.amsdard.io/?vendor-uuid=492d0cef-5427-4ed8-b12d-169ef39dd871&amp;code=5df345a5cc3a1e73f6a2085d4e78d42dcc564043&amp;state=oauth2
+</code></pre></div>
 <blockquote>
 <p>where <code>code</code> parameter value is the token used for requesting access token.</p>
 </blockquote>
@@ -386,19 +391,19 @@ You must provide all query parameters in order to enter the calculator properly.
 <blockquote>
 <p>Retrieve access token:</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl -X POST <span class="se">\</span>
--H <span class="s2">"Authorization: Basic YW1zdGVyZGFtc3RhbmRhcmQuY29tOlRoaXNNdXN0QmVBU2VjcmV0VmFsdWU="</span> <span class="se">\</span>
--H <span class="s2">"Content-Type: application/x-www-form-urlencoded"</span> <span class="se">\</span>
---data <span class="s2">"grant_type=authorization_code&amp;code=5df345a5cc3a1e73f6a2085d4e78d42dcc564043&amp;redirect_uri=https://esdec.app.amsdard.io/?vendor-uuid=492d0cef-5427-4ed8-b12d-169ef39dd871&amp;state=oauth2"</span> <span class="se">\</span>
+<div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="nt">-X</span> POST <span class="se">\</span>
+<span class="nt">-H</span> <span class="s2">"Authorization: Basic YW1zdGVyZGFtc3RhbmRhcmQuY29tOlRoaXNNdXN0QmVBU2VjcmV0VmFsdWU="</span> <span class="se">\</span>
+<span class="nt">-H</span> <span class="s2">"Content-Type: application/x-www-form-urlencoded"</span> <span class="se">\</span>
+<span class="nt">--data</span> <span class="s2">"grant_type=authorization_code&amp;code=5df345a5cc3a1e73f6a2085d4e78d42dcc564043&amp;redirect_uri=https://esdec.app.amsdard.io/?vendor-uuid=492d0cef-5427-4ed8-b12d-169ef39dd871&amp;state=oauth2"</span> <span class="se">\</span>
 <span class="s2">"https://webshop.com/oauth2/token"</span>
-</code></pre>
+</code></pre></div>
 <blockquote>
 <p>Minimal response</p>
 </blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"access_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1e3f5dda78695d070877aa0b21ccebdab88b50980e6e61618e76d22821c5d75e"</span><span class="w">
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"access_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1e3f5dda78695d070877aa0b21ccebdab88b50980e6e61618e76d22821c5d75e"</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre><h4 id='http-request-2'>HTTP Request</h4>
+</span></code></pre></div><h4 id='http-request-2'>HTTP Request</h4>
 <p><code>POST https://webshop.com/oauth2/token</code></p>
 
 <p>Following extra headers are required:</p>
@@ -435,32 +440,32 @@ You must provide all query parameters in order to enter the calculator properly.
 <blockquote>
 <p>Get user identity for access token:</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://webshop.com/oauth2/resource/identity?access_token=1e3f5dda78695d070877aa0b21ccebdab88b50980e6e61618e76d22821c5d75e"</span>
-</code></pre>
+<div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://webshop.com/oauth2/resource/identity?access_token=1e3f5dda78695d070877aa0b21ccebdab88b50980e6e61618e76d22821c5d75e"</span>
+</code></pre></div>
 <blockquote>
 <p>Minimal response</p>
 </blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"da39a3ee5e6b4b0d3255bfef95601890afd80709@example.com"</span><span class="w">
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"da39a3ee5e6b4b0d3255bfef95601890afd80709@example.com"</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre>
+</span></code></pre></div>
 <p>This endpoint should provide e-mail address (and/or other data about the customer).</p>
 <h4 id='http-request-3'>HTTP Request</h4>
 <p><code>GET https://webshop.com/oauth2/resource/identity</code></p>
-<h4 id='query-parameters-2'>Query Parameters</h4>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>access_token</td>
-<td>string</td>
-<td>Authorization token received in the previous call</td>
-</tr>
-</tbody></table>
+
+<p>The token received  in the previous call will be passed to the endpoint in one of 2 ways:</p>
+
+<ul>
+<li><p>request header
+<code>
+Authorization: Bearer &lt;access_token&gt;
+</code></p></li>
+<li><p>GET parameter &quot;access_token&quot;</p></li>
+</ul>
+
+<aside class="notice">
+Both variants cannot be used at the same time within the same vendor. The second identity request variant (token passed as query parameter access_token) can be enabled in the vendor settings.
+</aside>
 
 <aside class="notice">
 The e-mail might or might not be exposed directly - this depends on the integration agreement with Esdec. At least a unique e-mail hash per-customer is required.
@@ -475,36 +480,36 @@ If you find this guide confusing, refer to: <a href="https://aaronparecki.com/oa
 <blockquote>
 <p>The calculator will call your redirectUri with following JSON structure using AJAX:</p>
 </blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"session"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"shop-session-id"</span><span class="p">,</span><span class="w">  </span><span class="err">//</span><span class="w"> </span><span class="err">provided</span><span class="w"> </span><span class="err">earlier</span><span class="w">
-    </span><span class="s2">"moment"</span><span class="p">:</span><span class="w"> </span><span class="s2">"yyyy-MM-dd HH:mm:ss"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"language"</span><span class="p">:</span><span class="w"> </span><span class="s2">"[A-Z]{2}"</span><span class="w">  </span><span class="err">//</span><span class="w"> </span><span class="err">language</span><span class="w"> </span><span class="err">used</span><span class="w"> </span><span class="err">in</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">calculator</span><span class="w">
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"session"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"shop-session-id"</span><span class="p">,</span><span class="w">  </span><span class="err">//</span><span class="w"> </span><span class="err">provided</span><span class="w"> </span><span class="err">earlier</span><span class="w">
+    </span><span class="nl">"moment"</span><span class="p">:</span><span class="w"> </span><span class="s2">"yyyy-MM-dd HH:mm:ss"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"language"</span><span class="p">:</span><span class="w"> </span><span class="s2">"[A-Z]{2}"</span><span class="w">  </span><span class="err">//</span><span class="w"> </span><span class="err">language</span><span class="w"> </span><span class="err">used</span><span class="w"> </span><span class="err">in</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">calculator</span><span class="w">
   </span><span class="p">},</span><span class="w">
-  </span><span class="s2">"items"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+  </span><span class="nl">"items"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
     </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">".+"</span><span class="p">,</span><span class="w">    </span><span class="err">//</span><span class="w"> </span><span class="err">SKU</span><span class="w"> </span><span class="err">of</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">product</span><span class="w"> </span><span class="err">in</span><span class="w"> </span><span class="err">your</span><span class="w"> </span><span class="err">webshop</span><span class="w">
-      </span><span class="s2">"count"</span><span class="p">:</span><span class="w"> </span><span class="s2">"</span><span class="se">\\</span><span class="s2">d+"</span><span class="w">  </span><span class="err">//</span><span class="w"> </span><span class="err">number</span><span class="w"> </span><span class="err">of</span><span class="w"> </span><span class="err">items</span><span class="w">
+      </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">".+"</span><span class="p">,</span><span class="w">    </span><span class="err">//</span><span class="w"> </span><span class="err">SKU</span><span class="w"> </span><span class="err">of</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">product</span><span class="w"> </span><span class="err">in</span><span class="w"> </span><span class="err">your</span><span class="w"> </span><span class="err">webshop</span><span class="w">
+      </span><span class="nl">"count"</span><span class="p">:</span><span class="w"> </span><span class="s2">"</span><span class="se">\\</span><span class="s2">d+"</span><span class="w">  </span><span class="err">//</span><span class="w"> </span><span class="err">number</span><span class="w"> </span><span class="err">of</span><span class="w"> </span><span class="err">items</span><span class="w">
     </span><span class="p">}</span><span class="w">
     </span><span class="err">//</span><span class="w"> </span><span class="err">more</span><span class="w"> </span><span class="err">products...</span><span class="w">
   </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre>
+</span></code></pre></div>
 <blockquote>
 <p>When using iframe integration, product list needs to be picked up by the webshop window:</p>
 </blockquote>
-<pre class="highlight javascript tab-javascript"><code><span class="c1">// Sample expected event.data value:</span>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="c1">// Sample expected event.data value:</span>
 <span class="c1">// event.data = '{</span>
 <span class="c1">//  "session":{"id":"32987abc","moment":"2017-07-26 13:18:20","language":"NL"},</span>
 <span class="c1">//  "items": [{"code":"100-0000","count":"20"},{"code":"100-0001","count":"10"}]</span>
 <span class="c1">// }';</span>
 
-<span class="nb">window</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">'message'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
+<span class="nb">window</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">'</span><span class="s1">message</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
     <span class="kd">var</span> <span class="nx">message</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">message</span><span class="p">);</span>
 <span class="p">}.</span><span class="nx">bind</span><span class="p">(</span><span class="k">this</span><span class="p">));</span>
-</code></pre>
+</code></pre></div>
 <p>Once an end-user finishes building the project, the last step is to place ClickFit EVO products in the cart.
 This is by default managed by an AJAX call to a special endpoint (named <code>redirectUri</code>) provided by your webshop.</p>
 
